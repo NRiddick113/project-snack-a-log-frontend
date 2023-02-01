@@ -1,20 +1,20 @@
-.App{
-    background-color: bisque;
+.App {
+  background-color: bisque;
 }
 
-.Nav{
-    display: flex;
-    justify-content: space-between;
-    height: 250px;
-    background-image: url('./assets/snack\ banner.png');
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  height: 250px;
+  background-image: url("./assets/snack\ banner.png");
 }
 
-.snacks{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.snacks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-img{
-    width: 150px;
+img {
+  width: 150px;
 }
