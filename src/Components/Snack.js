@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 function Snack({ snack }) {
   return (
-    <div>
+    <div className="snack">
       <img src={snack.image}></img>
-      <p>
+      {/* <p>
         {snack.is_healthy ? (
-          <img src="./assets/heart-solid.png"></img>
+          <img src="./assets/heart-solid.png" alt="heart"></img>
         ) : (
-          <img src="./assets/heart-regular.png"></img>
+          <img src="./assets/heart-regular.png" alt="outline heart"></img>
         )}
-      </p>
+      </p> */}
       <Link to={`/snacks/${snack.id}`}>
         <p>{snack.name}</p>
       </Link>

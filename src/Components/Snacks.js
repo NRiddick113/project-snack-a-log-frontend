@@ -15,12 +15,12 @@ function Snacks() {
   }, []);
 
   return (
-    <div classname="Snacks">
-      <ul>
+    <div className="Snacks">
+      <ul className="snacks">
         {snacks.map((snack) => {
           return (
             <li>
-              <Snack snack={snack} />
+              <Snack key={snack.id} snack={snack} />
             </li>
           );
         })}
