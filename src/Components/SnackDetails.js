@@ -38,8 +38,8 @@ function SnackDetails(){
 
     return (
         <div>
-            {snack.is_healthy ? <p>This snack is healthy.</p> : <p>This snack is not healthy.</p>}
-            {snack.is_healthy ?  <img src="./assets/heart-solid.png"></img> : <img src="./assets/heart-regular.png"></img>}
+            {/* {snack.is_healthy ? <p>This snack is healthy.</p> : <p>This snack is not healthy.</p>}
+            {snack.is_healthy ?  <img src="./assets/heart-solid.png"></img> : <img src="./assets/heart-regular.png"></img>} */}
            <p>{snack.name}</p>
            <img src={snack.image} alt="snack"></img>
            <p>protein: {snack.protein}</p>
