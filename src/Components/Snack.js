@@ -7,13 +7,13 @@ function Snack({ snack }) {
   return (
     <div>
       <img src={snack.image}></img>
-      <p>
-        {snack.is_healthy ? (
-          <img src={heartSolid} alt="heart-solid"></img>
-        ) : (
+       <p>
+        {snack.is_healthy ? 
+          <img src={heartSolid}></img>
+        : 
           <img src={heartOutline}></img>
-        )}
-      </p>
+        }
+      </p> 
       <Link to={`/snacks/${snack.id}`}>
         <p>{snack.name}</p>
       </Link>

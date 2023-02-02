@@ -83,6 +83,15 @@ function SnackNewForm() {
           required
           onChange={handleTextChange}
         />
+        <label htmlFor="amount">Amount:</label>
+        <input
+          id="amount"
+          type="text"
+          name="amount"
+          value={snack.amount}
+          required
+          onChange={handleTextChange}
+        />
 
         <br />
         <input type="submit" />

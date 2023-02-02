@@ -19,8 +19,8 @@ function Snacks() {
       <ul className="snacks" style={{ listStyle: "none" }}>
         {snacks.map((snack) => {
           return (
-            <li>
-              <Snack key={snack.id} snack={snack} />
+            <li key={snack.id}>
+              <Snack  snack={snack} />
             </li>
           );
         })}

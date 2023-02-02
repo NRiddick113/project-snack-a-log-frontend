@@ -4,6 +4,7 @@ import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
 
 import axios from "axios";
+import HeartHealth from "./HeartHealth";
 
 
 const API = process.env.REACT_APP_API_URL;
@@ -11,6 +12,7 @@ const API = process.env.REACT_APP_API_URL;
 function SnackDetails(){
     const { id } = useParams();
     const [snack, setSnack] = useState({});
+    const [snackHealth, SetSnackHealth] = useState({})
     const navigate = useNavigate()
 
     const deleteSnack = () => {
@@ -34,20 +36,24 @@ function SnackDetails(){
         .get(`${API}/snacks/${id}`)
         .then((res) => {
             setSnack(res.data)
+            SetSnackHealth(res.data.is_healthy)
         })
         .catch((error) => {
             console.log(error)
         })
     }, [id]);
-
+console.log(snack)
     return (
         <div>
-           <p>
+          <p>${snack.price}</p>
+          <button>Add To Cart</button>
+          <HeartHealth snackHealth={snackHealth}/>
+      <p>
         {snack.is_healthy ? 
-          <img src={heartSolid}></img> && <p>"This snack is healthy"</p>
-         : (
-          <img src={heartOutline}></img>
-        )}
+           "This snack is healthy"
+         : 
+         "This snack is not healthy"
+        }
       </p>
            <p>{snack.name}</p>
            <img src={snack.image} alt="snack"></img>
