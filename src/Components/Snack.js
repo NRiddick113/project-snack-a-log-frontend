@@ -11,6 +11,7 @@ function Snack({ snack }) {
       {/* <p>
         {snack.is_healthy ? (
           <img src={heartSolid} alt=“heart-solid”></img>
+          <img src={heartSolid} alt="heart-solid"></img>
         ) : (
           <img src={heartOutline}></img>
         )}

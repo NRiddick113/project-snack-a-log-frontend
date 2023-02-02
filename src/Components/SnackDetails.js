@@ -39,42 +39,38 @@ function SnackDetails() {
       });
   }, [id]);
 
-  return (
-    <div>
-      <p></p>
-      {/* <p>
-        {snack.is_healthy ?
-          <img src={heartSolid}></img> && <p>“This snack is healthy”</p>
+    return (
+        <div>
+           <p>
+        {snack.is_healthy ? 
+          <img src={heartSolid}></img> && <p>"This snack is healthy"</p>
          : (
           <img src={heartOutline}></img>
         )}
-      </p> */}
-      <p>
-        {snack.is_healthy
-          ? "This snack is healthy"
-          : "This snack is not healthy"}
       </p>
-      <p>{snack.name}</p>
-      <img src={snack.image} alt="snack"></img>
-      <p>protein: {snack.protein}</p>
-      <p>fiber: {snack.fiber}</p>
-      <p>sugar: {snack.added_sugar}</p>
-      <div className="buttons">
-        <>
-          <Link to={`/snacks`}>
-            <button>Back</button>
-          </Link>
-        </>
-        <>
-          <Link to={`/snacks/${snack.id}/edit`}>
-            <button>Edit</button>
-          </Link>
-        </>
-        <>
-          <button onClick={handleDelete}>Delete</button>
-        </>
-      </div>
-    </div>
-  );
+           <p>{snack.name}</p>
+           <img src={snack.image} alt="snack"></img>
+           <p>protein: {snack.protein}</p>
+           <p>fiber: {snack.fiber}</p>
+           <p>sugar: {snack.added_sugar}</p> 
+           <div className="buttons">
+          <>
+            <Link to={`/snacks`}>
+              <button>Back</button>
+            </Link>
+          </>
+          <>
+            <Link to={`/snacks/${snack.id}/edit`}>
+              <button>Edit</button>
+            </Link>
+          </>
+          <>
+            <button onClick={handleDelete}>Delete</button>
+          </>
+        </div>
+        </div>
+    )
 }
-export default SnackDetails;
+
+export default SnackDetails 
+  

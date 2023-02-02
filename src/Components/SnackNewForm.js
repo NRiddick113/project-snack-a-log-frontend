@@ -46,14 +46,12 @@ function SnackNewForm() {
           type="text"
           onChange={handleTextChange}
           placeholder="Name"
-          required
         />
         <label htmlFor="image">Image:</label>
         <input
           id="image"
           type="text"
           pattern="http[s]*://.+"
-          required
           value={snack.image}
           placeholder="http://"
           onChange={handleTextChange}
