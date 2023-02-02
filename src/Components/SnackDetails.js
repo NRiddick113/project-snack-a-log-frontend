@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom"
+import heartSolid from "../assets/heart-solid.png";
+import heartOutline from "../assets/heart-regular.png";
+
 import axios from "axios";
+
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -38,8 +42,13 @@ function SnackDetails(){
 
     return (
         <div>
-            {snack.is_healthy ? <p>This snack is healthy.</p> : <p>This snack is not healthy.</p>}
-            {snack.is_healthy ?  <img src="./assets/heart-solid.png"></img> : <img src="./assets/heart-regular.png"></img>}
+           <p>
+        {snack.is_healthy ? 
+          <img src={heartSolid}></img> && <p>"This snack is healthy"</p>
+         : (
+          <img src={heartOutline}></img>
+        )}
+      </p>
            <p>{snack.name}</p>
            <img src={snack.image} alt="snack"></img>
            <p>protein: {snack.protein}</p>

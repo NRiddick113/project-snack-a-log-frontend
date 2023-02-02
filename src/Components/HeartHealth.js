@@ -1,10 +1,21 @@
+import { useState, useEffect } from "react";
 import heartSolid from "../assets/heart-solid.png";
 import heartOutline from "../assets/heart-regular.png";
 
-function HeartHealth({ snackHealth }) {
+function HeartHealth() {
+  const [snackHealth, setSnackHealth] = useState();
+
   return (
     <>
-      <p>????</p>
+      <p> {snackHealth.is_healthy ? (
+        <span>
+          <img src={heartSolid}></img>
+        </span>
+      ) : (
+        <span>
+          <img src={heartOutline}></img>
+        </span>
+      )}</p>
     </>
   );
 }
