@@ -1,43 +1,44 @@
 import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import HeartHealth from "./HeartHealth";
-// import heartSolid from “../assets/heart-solid.png”;
-// import heartOutline from “../assets/heart-regular.png”;
+import { useParams, Link, useNavigate } from "react-router-dom"
+import heartSolid from "../assets/heart-solid.png";
+import heartOutline from "../assets/heart-regular.png";
+
 import axios from "axios";
+
 
 const API = process.env.REACT_APP_API_URL;
 
-function SnackDetails() {
-  const { id } = useParams();
-  const [snack, setSnack] = useState({});
-  const navigate = useNavigate();
+function SnackDetails(){
+    const { id } = useParams();
+    const [snack, setSnack] = useState({});
+    const navigate = useNavigate()
 
-  const deleteSnack = () => {
-    axios
-      .delete(`${API}/snacks/${id}`)
-      .then(
-        () => {
-          navigate(`/snacks`);
-        },
-        (error) => console.error(error)
-      )
-      .catch((c) => console.warn("catch", c));
-  };
+    const deleteSnack = () => {
+        axios
+          .delete(`${API}/snacks/${id}`)
+          .then(
+            () => {
+              navigate(`/snacks`);
+            },
+            (error) => console.error(error)
+          )
+          .catch((c) => console.warn("catch", c));
+      };
+    
+      const handleDelete = () => {
+        deleteSnack();
+      };
 
-  const handleDelete = () => {
-    deleteSnack();
-  };
-
-  useEffect(() => {
-    axios
-      .get(`${API}/snacks/${id}`)
-      .then((res) => {
-        setSnack(res.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, [id]);
+    useEffect(() => {
+        axios
+        .get(`${API}/snacks/${id}`)
+        .then((res) => {
+            setSnack(res.data)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }, [id]);
 
     return (
         <div>
@@ -72,5 +73,4 @@ function SnackDetails() {
     )
 }
 
-export default SnackDetails 
-  
+export default SnackDetails;

@@ -12,6 +12,7 @@ import Show from "./Pages/Show";
 import NavBar from "./Components/NavBar";
 import './app.css'
 
+
 function App() {
   return (
     <div className="App">
