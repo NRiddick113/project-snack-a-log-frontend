@@ -44,8 +44,9 @@ function SnackDetails(){
     }, [id]);
 console.log(snack)
     return (
+<div className="Show">
 
-        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}  >
       <p>
         {snack.is_healthy ? 
            "This snack is healthy"
@@ -80,6 +81,7 @@ console.log(snack)
           <>
             <button onClick={handleDelete}>Delete</button>
           </>
+        </div>
         </div>
         </div>
     )

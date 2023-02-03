@@ -11,15 +11,19 @@ import Show from "./Pages/Show";
 // COMPONENTS
 import NavBar from "./Components/NavBar";
 import './app.css'
+import { useState } from "react";
+import Login from "./Components/Login";
 
 
 function App() {
+  const [showNav, setShowNav] = useState(true)
+
   return (
     <div className="App">
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" element={<Login funcNavi={setShowNav} />} />
           <Route path="/snacks" element={<Index />} />
           <Route path="/snacks/new" element={<New />} />
           <Route exact path="/snacks/:id" element={<Show />} />

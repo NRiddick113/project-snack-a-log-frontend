@@ -20,7 +20,7 @@ function Snacks() {
         {snacks.map((snack) => {
           return (
 
-            <li style={{width: '300px', border: '1px solid black'}} key={snack.id}>
+            <li style={{width: '300px', border: '1px black'}} key={snack.id}>
               <Snack snack={snack} />
 
             </li>
