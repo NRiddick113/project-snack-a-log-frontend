@@ -1,9 +1,9 @@
 # Full Stack Application Pair Project
 
 ## Links
-https://snack-backend-jcrl.onrender.com/
-https://main--stellar-blancmange-b66604.netlify.app/
-https://github.com/TrianePeart/back-end
+-https://snack-backend-jcrl.onrender.com/
+-https://main--stellar-blancmange-b66604.netlify.app/
+-https://github.com/TrianePeart/back-end
 
 ## Snack-a-log
 
