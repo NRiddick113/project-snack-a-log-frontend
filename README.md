@@ -1,5 +1,10 @@
 # Full Stack Application Pair Project
 
+## Links
+https://snack-backend-jcrl.onrender.com/
+https://main--stellar-blancmange-b66604.netlify.app/
+https://github.com/TrianePeart/back-end
+
 ## Snack-a-log
 
 Create an app that allows users to log their favorite snacks. Add functionality that will enable users to see whether or not their snack is healthy based on a simple algorithm.
