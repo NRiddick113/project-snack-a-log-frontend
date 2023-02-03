@@ -4,18 +4,30 @@ import heartOutline from "../assets/heart-regular.png";
 
 function Snack({ snack }) {
   return (
-    <div>
+
+    <div style={{
+      padding: 5,
+      height: 'auto',
+      textAlign:'center',
+      margin: '40px auto'
+
+    }}>
       <Link to={`/snacks/${snack.id}`}>
-        <img src={snack.image}></img>
+      <img src={snack.image}></img>
       </Link>
-      <p>
+      <div>
+      <span style={{width:'33px', height:'33px'}}>
         {snack.is_healthy ? (
-          <img src={heartSolid}></img>
+          <img src={heartSolid} style={{height: '20px', width:'20px'}} alt="heart-solid"></img>
+
         ) : (
-          <img src={heartOutline}></img>
+          <img src={heartOutline} style={{height: '20px', width:'20px'}}></img>
         )}
-      </p>
-      <p>{snack.name}</p>
+
+      </span>
+        <p>{snack.name}</p>
+        </div>
+
     </div>
   );
 }

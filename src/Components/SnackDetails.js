@@ -44,16 +44,22 @@ function SnackDetails(){
     }, [id]);
 console.log(snack)
     return (
-        <div>
-          <p>${snack.price}</p>
-          <button>Add To Cart</button>
-          <HeartHealth snackHealth={snackHealth}/>
+
+        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center'}}>
       <p>
         {snack.is_healthy ? 
            "This snack is healthy"
          : 
          "This snack is not healthy"
         }
+      </p>
+           <p>
+        {snack.is_healthy ? 
+          <img src={heartSolid}></img>
+         : (
+          <img src={heartOutline}></img>
+        )}
+
       </p>
            <p>{snack.name}</p>
            <img src={snack.image} alt="snack"></img>
