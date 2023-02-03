@@ -1,11 +1,16 @@
 .App {
-  background-color: bisque;
+  background-color: whitesmoke;
 }
 
 .Nav {
   display: flex;
   justify-content: space-between;
   height: 250px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  box-shadow: 2px 2px 3px;
   background-image: url("./assets/snack\ banner.png");
 }
 
@@ -17,4 +22,8 @@
 
 img {
   width: 150px;
+}
+
+li{
+  background-color: gray;
 }

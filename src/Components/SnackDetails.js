@@ -41,10 +41,17 @@ function SnackDetails(){
     }, [id]);
 
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center'}}>
+      <p>
+        {snack.is_healthy ? 
+           "This snack is healthy"
+         : 
+         "This snack is not healthy"
+        }
+      </p>
            <p>
         {snack.is_healthy ? 
-          <img src={heartSolid}></img> && <p>"This snack is healthy"</p>
+          <img src={heartSolid}></img>
          : (
           <img src={heartOutline}></img>
         )}
