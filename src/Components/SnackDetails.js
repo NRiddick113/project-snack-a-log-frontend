@@ -46,7 +46,7 @@ console.log(snack)
     return (
 <div className="Show">
 
-        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center', backgroundColor: 'white'}}  >
+        <div style={{display: 'flex', flexDirection: "column", justifyContent: 'center', alignItems: 'center'}}  >
       <p>
         {snack.is_healthy ? 
            "This snack is healthy"
